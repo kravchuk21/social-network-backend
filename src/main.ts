@@ -8,7 +8,9 @@ const PORT = process.env.PORT ? Number(process.env.PORT) : 3003;
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: "*"
+    origin: '*',
+    allowedHeaders: '*',
+    methods: 'POST,GET,DELETE,PUT,OPTIONS'
   });
 
   const config = new DocumentBuilder()
