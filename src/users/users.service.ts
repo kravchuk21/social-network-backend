@@ -17,11 +17,11 @@ export class UsersService {
     return await this.userModel.find().exec();
   }
 
-  async findOne(id): Promise<User> {
+  async findOne(id: string): Promise<User> {
     return this.userModel.findOne({ _id: id });
   }
 
   async getUserByEmail(email: string): Promise<User> | null {
-    return this.userModel.findOne({ email });
+    return this.userModel.findOne({ email }).select('+password');
   }
 }

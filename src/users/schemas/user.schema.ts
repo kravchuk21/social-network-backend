@@ -25,7 +25,7 @@ export class User {
   @ApiProperty({ example: 'test@gmail.com', description: 'Почта пользователя' })
   email: string;
 
-  @Prop({ required: true })
+  @Prop({ required: true, select: false })
   @ApiProperty({ example: '123456qwerty', description: 'Пароль пользователя' })
   password: string;
 }

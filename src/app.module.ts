@@ -9,7 +9,6 @@ import { PostModule } from './post/post.module';
   imports: [
     ConfigModule.forRoot(),
     UsersModule,
-    //TODO: добавить mongo uri в .env
     MongooseModule.forRoot(
       process.env.MONGO_URI || 'mongodb://localhost:27017/social-network',
     ),

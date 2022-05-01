@@ -8,8 +8,6 @@ import { CurrentUser } from './decorators/currentUser.decorator';
 import { User } from 'src/users/schemas/user.schema';
 import { UsersService } from '../users/users.service';
 
-//TODO: скрывать пароль пользователя
-
 @ApiTags('auth')
 @Controller('auth')
 export class AuthController {
