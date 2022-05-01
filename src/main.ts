@@ -7,6 +7,7 @@ const PORT = process.env.PORT ? Number(process.env.PORT) : 3003;
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
 
   const config = new DocumentBuilder()
     .setTitle('Social Network')
